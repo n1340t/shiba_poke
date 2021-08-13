@@ -11,7 +11,7 @@ module.exports = merge(common, {
   },
   devtool: 'eval-source-map',
   devServer: {
-    contentBase: path.resolve(__dirname, './dist'),
+    contentBase: path.resolve(__dirname, './asset'),
     //inline is true by default,
     hot: false,
     open: true,
