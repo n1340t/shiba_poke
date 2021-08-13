@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack serve --color --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "predeploy": "npm run build",
     "deploy": "node deploy.js"
   },
   "repository": {
@@ -19,9 +22,28 @@
   },
   "homepage": "https://github.com/n1340t/shiba_poke#readme",
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "@babel/core": "^7.15.0",
+    "autoprefixer": "^10.3.1",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-webpack-plugin": "^3.0.1",
+    "gh-pages": "^3.2.3",
+    "mini-css-extract-plugin": "^2.2.0",
+    "postcss-loader": "^6.1.1",
+    "sass": "^1.37.5",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "bootstrap": "^5.1.0",
+    "html-webpack-plugin": "^5.3.2",
     "jquery": "^3.6.0"
   }
 }
