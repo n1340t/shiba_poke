@@ -17,38 +17,6 @@ module.exports = {
         use: 'babel-loader',
       },
       {
-        test: /\.css$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader', // , run first
-        ],
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          // Creates `style` nodes from JS strings
-          // 'style-loader',
-          // Translates CSS into CommonJS, Turn CSS into JS
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              // `postcssOptions` is needed for postcss 8.x;
-              // if you use postcss 7.x skip the key
-              postcssOptions: {
-                // postcss plugins, can be exported to postcss.config.js
-                plugins: function () {
-                  return [require('autoprefixer')];
-                },
-              },
-            },
-          },
-          // Compiles Sass to CSS, Run first
-          'sass-loader',
-        ],
-      },
-      {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
@@ -72,10 +40,6 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   test: /\.html$/i,
-      //   loader: 'html-loader',
-      // },
     ],
   },
   optimization: {
