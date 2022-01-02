@@ -39,8 +39,11 @@ module.exports = merge(common, {
       paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
     }),
     new ImageMinimizerPlugin({
-      minimizerOptions: {
-        plugins: [['pngquant', { quality: [0.6, 0.8] }]],
+      minimizer: {
+        implementation: ImageMinimizerPlugin.imageminMinify,
+        options: {
+          plugins: [['pngquant', { quality: [0.6, 0.8] }]],
+        },
       },
     }),
   ],
