@@ -1,3 +1,4 @@
+import 'bootstrap/js/dist/collapse';
 import '../scss/index.scss';
 import '../asset/images/logo.png';
 import '../asset/images/coming_soon.png';

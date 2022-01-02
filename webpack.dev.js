@@ -27,13 +27,17 @@ module.exports = merge(common, {
   },
   devtool: 'eval-source-map',
   devServer: {
-    contentBase: path.resolve(__dirname, './'),
+    static: {
+      directory: path.resolve(__dirname, './'),
+    },
     // inline is true by default,
     hot: false,
     open: true,
-    overlay: {
-      warnings: true,
-      errors: true,
+    client: {
+      overlay: {
+        warnings: true,
+        errors: true,
+      },
     },
   },
 });
